@@ -5,7 +5,7 @@ class NullHelper:
     def __init__(self,df):
         self.df = df
 
-    def check_for_values(self,value=0):
+    def check_for_values(self,value):
         '''let's you input common values that could be nans
         and will tell you how many a column has'''
         columns = self.columns

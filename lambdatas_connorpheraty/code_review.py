@@ -1,7 +1,7 @@
 import numpy as np 
 import pandas as pd 
-from jeff_rowe_module import NullHelper
-from Data_Transformers import DataTransformer as DT
+from jeff_rowe_module import NullHelper as nh
+from Data_Transformers import DataTransformer as dt
 
 df = pd.read_csv("/Users/connorheraty/Desktop/Datasets/UCI/adult.csv",
                  names=['age', 'workclass', 'fnlwgt', 'education', 'education-num', 'marital-status',
@@ -12,7 +12,11 @@ df = pd.read_csv("/Users/connorheraty/Desktop/Datasets/UCI/adult.csv",
 
 df = df.replace(' ?',np.nan)
 
-#DT.cardinality(df) 
-DT.cat_num_split(df)
+#dt.cardinality_lister(df) 
+num, cat = dt.cat_num_split(df)
+
+
+
+
 
 
