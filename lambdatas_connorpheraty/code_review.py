@@ -13,5 +13,6 @@ df = pd.read_csv("/Users/connorheraty/Desktop/Datasets/UCI/adult.csv",
 df = df.replace(' ?',np.nan)
 
 #DT.cardinality(df) 
-DT.root_squared(df, 'age')
+DT.cat_num_split(df)
+
 
